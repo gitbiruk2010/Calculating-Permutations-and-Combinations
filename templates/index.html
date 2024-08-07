@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permutations and Combinations Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Permutations and Combinations Calculator</h1>
+    <form action="{{ url_for('calculate') }}" method="post">
+      <label for="n">Total number of items (n):</label>
+      <input type="number" id="n" name="n" required>
+      <label for="r">Number of items to choose or arrange (r):</label>
+      <input type="number" id="r" name="r" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="results">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </div>
+  </div>
+</body>
+</html>
