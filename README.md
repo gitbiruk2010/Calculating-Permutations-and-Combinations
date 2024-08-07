@@ -22,7 +22,7 @@ This is a web application that calculates permutations and combinations based on
 ### Installation
 
 1. Clone the repository:
-   git clone 
+   git clone https://github.com/gitbiruk2010/Calculating-Permutations-and-Combinations
 2. Navigate to the project directory: cd permutations-combinations-calculator
 3. Install the required python packages: pip install flask
 
